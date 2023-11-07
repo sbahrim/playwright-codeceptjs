@@ -16,7 +16,8 @@ export const config: CodeceptJS.MainConfig = {
     Playwright: {
       browser: 'chromium',
       url: 'http://localhost',
-      show: false
+      show: process.env.HEADLESS !== 'true',
+      
     }
   },
   include: {
